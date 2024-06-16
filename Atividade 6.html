@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir Valores</title>
+</head>
+<body>
+    <h1>Insira os Valores</h1>
+    
+    <label for="userString">Insira uma string:</label>
+    <input type="text" id="userString" placeholder="Digite uma string">
+    <br><br>
+    
+    <label for="userNumber">Insira um número:</label>
+    <input type="number" id="userNumber" placeholder="Digite um número">
+    <br><br>
+    
+    <label for="userBoolean">Selecione um valor booleano:</label>
+    <select id="userBoolean">
+        <option value="true">Verdadeiro</option>
+        <option value="false">Falso</option>
+    </select>
+    <br><br>
+    
+    <button onclick="displayValues()">Enviar</button>
+    
+    <div id="valuesContainer"></div>
+    
+    <script>
+        function displayValues() {
+
+            const userString = document.getElementById('userString').value;
+            const userNumber = document.getElementById('userNumber').value;
+            const userBoolean = document.getElementById('userBoolean').value;
+            
+            const message = `String: ${userString}<br>Número: ${userNumber}<br>Booleano: ${userBoolean}`;
+            
+            document.getElementById('valuesContainer').innerHTML = message;
+        }
+    </script>
+</body>
+</html>

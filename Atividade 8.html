@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Strings</title>
+    <script>
+        function manipularString() {
+
+            const userString = document.getElementById("userString").value;
+
+            const comprimento = userString.length;
+
+            const maiusculas = userString.toUpperCase();
+
+            document.getElementById("comprimento").innerText = "Comprimento da string: " + comprimento;
+            document.getElementById("maiusculas").innerText = "String em maiúsculas: " + maiusculas;
+        }
+    </script>
+</head>
+<body>
+    <h1>Manipulação de Strings</h1>
+    <label for="userString">Insira uma string:</label>
+    <input type="text" id="userString"><br><br>
+    <button onclick="manipularString()">Exibir Resultados</button>
+    <h2>Resultados:</h2>
+    <p id="comprimento">Comprimento da string: </p>
+    <p id="maiusculas">String em maiúsculas: </p>
+</body>
+</html>

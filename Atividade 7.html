@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <script>
+        function calcular() {
+
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+
+            const soma = num1 + num2;
+            const subtracao = num1 - num2;
+            const multiplicacao = num1 * num2;
+            const divisao = num1 / num2;
+
+            document.getElementById("soma").innerText = "Soma: " + soma;
+            document.getElementById("subtracao").innerText = "Subtração: " + subtracao;
+            document.getElementById("multiplicacao").innerText = "Multiplicação: " + multiplicacao;
+            document.getElementById("divisao").innerText = "Divisão: " + divisao;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1" step="any"><br><br>
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2" step="any"><br><br>
+    <button onclick="calcular()">Calcular</button>
+    <h2>Resultados:</h2>
+    <p id="soma">Soma: </p>
+    <p id="subtracao">Subtração: </p>
+    <p id="multiplicacao">Multiplicação: </p>
+    <p id="divisao">Divisão: </p>
+</body>
+</html>
